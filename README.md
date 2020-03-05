@@ -84,16 +84,6 @@ export default {
 
 
 
-#### Changes from original plugin
-
-ImageUploader.vue changed from html tags to Vuetify tags (v-)
-
-TODO: pass all vuetify props through plugin to vuetify tags
-        currently working: 
-        outlined
-        label
-
-
 
 
 
