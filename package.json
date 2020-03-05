@@ -1,0 +1,67 @@
+{
+  "name": "vuetify-image-upload-resize",
+  "version": "1.0.0",
+  "description": "Vuetify restyled version of vue-image-upload-resize by Svale Fossåskaret <svale@3by5.no>",
+  "author": "Kelly Gould <kelly@dragonzite.ca>",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-lib": "vue-cli-service build --target lib --name vuetify-image-upload-resize src/components/index.js",
+    "build-wc": "vue-cli-service build --target wc --name vuetify-image-upload-resize src/components/ImageUploader.vue",
+    "test": "vue-cli-service test:unit"
+  },
+  "main": "dist/vuetify-image-upload-resize.umd.js",
+  "module": "dist/vuetify-image-upload-resize.common.js",
+  "browser": {
+    "./sfc": "src/ImageUploader.vue"
+  },
+  "unpkg": "dist/vuetify-image-upload-resize.umd.min.js",
+  "files": [
+    "dist",
+    "src/components/ImageUploader.vue",
+    "src/utils/exif.js"
+  ],
+  "dependencies": {
+    "blueimp-canvas-to-blob": "^3.14.0",
+    "vue": "^2.5.17",
+    "vuetify": "^2.2.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-plugin-unit-jest": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-vuetify": "~2.0.5",
+    "vue-template-compiler": "^2.5.17",
+    "vuetify-loader": "^1.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/dragonzite/vuetify-image-upload-resize/issues"
+  },
+  "homepage": "https://github.com/dragonzite/vuetify-image-upload-resize#readme",
+  "keywords": [
+    "vue",
+    "upload",
+    "uploader",
+    "img",
+    "image",
+    "resize",
+    "vuetify"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonzite/vuetify-image-upload-resize.git"
+  }
+}
