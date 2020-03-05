@@ -84,12 +84,12 @@ export default {
 
 
 
-
+---
 
 
 ## Original README file starts here  Markup and props below.
 
-
+---
 
 # Vue Image Upload and Resize
 A Vue.js Plugin Component for client-side image upload with optional resizing and exif-based autorotate.
