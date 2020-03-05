@@ -46,7 +46,7 @@ To get around this you need to install the componenet as a client side plugin.
 1) Create a new file: `plugins/vue-image-upload.js`, and add the following code:
 ```js
 import Vue from 'vue'
-import ImageUploader from 'vue-image-upload-resize'
+import ImageUploader from 'vuetify-image-upload-resize'
 
 Vue.use(ImageUploader)
 ```
@@ -57,12 +57,12 @@ Vue.use(ImageUploader)
 export default {
   // ... other config
   plugins: [
-    { src: '~/plugins/vue-image-upload.js', mode: 'client' },
+    { src: '~/plugins/vuetify-image-upload.js', mode: 'client' },
   ]
 }
 ```
 
-3) When you use the componenent inside a page, make sure to wrap it in `<client-only>` tags (`<no-ssr>` in v < 2.9.0, [docs](https://nuxtjs.org/api/components-client-only/)).
+3) When you use the componenent inside a page, make sure to wrap it in `<client-only>` tags.
 ```html
 <template>
   <client-only>
@@ -87,7 +87,7 @@ export default {
 
 
 
-# Original README file starts here  Markup and props below.
+## Original README file starts here  Markup and props below.
 
 
 

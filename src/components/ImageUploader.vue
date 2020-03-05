@@ -1,6 +1,9 @@
 <template>
   <div>
     <v-img v-if="imagePreview" :src="imagePreview" class="img-preview" width="100%" />
+
+<!-- TODO: finish getting v-file-input props passed through -->
+
     <v-file-input
       :id="id"
       :class="className"
