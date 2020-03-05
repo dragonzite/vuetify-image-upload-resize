@@ -7,12 +7,13 @@ and this project adheres (more or less) to [Semantic Versioning](https://semver.
 ---
 ## [1.0]  - 2020-03-05
 
-### Changes from original plugin
+### Changed 
+- turned into vuetify-image-upload-resize to upload to npm for use in a project
 
 - ImageUploader.vue changed from html tags to Vuetify tags (v-)
 
 TODO: pass all vuetify props through plugin to Vuetify tags
-        currently working: 
+        currently known working props: 
         outlined
         label
 
