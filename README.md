@@ -1,7 +1,7 @@
 # Vuetify Image Upload and Resize
 
-A Vuetify style adaptation of the vue-image-upload-resize plugin component 
-https://www.npmjs.com/package/vue-image-upload-resize
+A Vuetify style adaptation of the [vue-image-upload-resize plugin component] 
+(https://www.npmjs.com/package/vue-image-upload-resize)
 
 
 ## Installation
@@ -87,7 +87,9 @@ export default {
 ---
 
 
-## Original README file starts here  Markup and props below.
+## Original README file starts here 
+
+ Markup and Props below.
 
 ---
 
