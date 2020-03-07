@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+vue-image-upload-resize-master
 
 # local env files
 .env.local
