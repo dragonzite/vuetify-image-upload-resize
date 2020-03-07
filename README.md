@@ -4,17 +4,6 @@ A Vuetify style adaptation of the [vue-image-upload-resize]
 (https://www.npmjs.com/package/vue-image-upload-resize) plugin component
 
 
-## Installation
-### yarn
-```bash
-yarn add vuetify-image-upload-resize
-```
-### npm
-```bash
-npm install --save vuetify-image-upload-resize
-```
-
-
 ### Usage
 
 #### Global Registration
@@ -80,7 +69,7 @@ export default {
 ## Roadmap and todos
 TODO: get all vuetify component props passing through plug in
 
-currently known working:
+currently working:
 
 ```html
             <image-uploader             
