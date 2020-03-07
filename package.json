@@ -1,6 +1,6 @@
 {
   "name": "vuetify-image-upload-resize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vuetify restyled version of vue-image-upload-resize by Svale Fossåskaret <svale@3by5.no>",
   "author": "Kelly Gould <kelly@dragonzite.ca>",
   "scripts": {
