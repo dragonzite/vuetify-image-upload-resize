@@ -77,7 +77,19 @@ export default {
 </details>
 
 
+## Roadmap and todos
+TODO: get all vuetify component props passing through plug in
 
+currently known working:
+
+```html
+            <image-uploader             
+              :outlined="true"
+              :label="<lable string>"  
+            >
+            </image-uploader>
+
+```
 
 
 
