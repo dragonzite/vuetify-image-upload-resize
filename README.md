@@ -67,12 +67,38 @@ export default {
 
 
 ## Roadmap and todos
-TODO: get all vuetify component props passing through plug in
+TODO: get all vuetify component props, events, slots passing through plug in
+    
 
 currently working:
+all props need the :bind operator to pass in to plugin
+
+append-icon -> will accept any valid [mdi-icon](https://cdn.materialdesignicons.com/) 
+append-outer-icon -> will accept any valid mdi-icon
+auto-focus -> boolean
+background-color -> will accept name, rgb, hex and MDI theme colors (primary, secondary, etc.)
+chips -> boolean
+clear-icon -> will accept any valid mdi-icon
+clearable -> boolean
+dark -> boolean 
+outlined => boolean
+prepend-icon -> will accept ane valid mdi-icon
+
+
+currently don't have the skills to get working:
+counter + related props
+
+
+
+
+
 
 ```html
             <image-uploader             
+              :append-icon="'mdi-camera'"
+              :append-outer-icon="mdi-camera"
+              :auto-focus="false"
+              :background-color="primary"            
               :outlined="true"
               :label="<lable string>"  
             >
@@ -86,6 +112,12 @@ currently working:
 
 
 ---
+## Added Props
+
+#### imagePosition
+Sets the v-img field to the top or the bottom of the file input. Default is image at the top.
+* type: Boolean
+* default: true
 
 
 ## Original README file starts here 

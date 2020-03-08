@@ -5,6 +5,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres (more or less) to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [1.0.5] - 2020-03-07
+
+### Added
+- added and tested props:
+        - append-icon 
+        - append-outer-icon 
+        - auto-focus 
+        - background-color theme colors (primary,secondary, etc.)
+        - chips 
+        - clear-icon 
+        - clearable 
+        - dark 
+        - prepend-icon 
+
+---
 ## [1.0]  - 2020-03-05
 
 ### Changed 
@@ -17,7 +32,7 @@ TODO: pass all vuetify props through plugin to Vuetify tags
         outlined
         label
 
-
+### Changelog for original plugin starts here
 ___
 ## [2.3]  - 2020-01-27
 ### Fixed

@@ -1,16 +1,11 @@
 <template>
   <div>
-    <v-img v-if="imagePreview" :src="imagePreview" class="img-preview" width="100%" />
+    <v-img v-if="imagePreview" :src="imagePreview" class="img-preview" />
 
-<!-- TODO: finish getting v-file-input props passed through -->
+    <!-- TODO: finish getting v-file-input props passed through -->
 
     <v-file-input
-      :id="id"
-      :class="className"
-      type="file"
-      @change="uploadFile"
       :accept="accept"
-      :capture="capture"
       :append-icon="appendIcon"
       :append-outer-icon="appendOuterIcon"
       :autofocus="autoFocus"
@@ -18,13 +13,22 @@
       :chips="chips"
       :clear-icon="clearIcon"
       :clearable="clearable"
+      :color="color"
+      :dark="dark"
       :hint="hint"
       :loading="loading"
       :label="label"
       :outlined="outlined"
-      prepend-icon="mdi-camera"
+      :prepend-icon="prependIcon"
+      class="mt-4"
+      :id="id"
+      :class="className"
+      type="file"
+      :capture="capture"
+      @change="uploadFile"
     />
     <slot name="upload-label"></slot>
+    <v-img v-if="imagePreview" :src="imagePreview" class="img-preview" />
   </div>
 </template>
 
@@ -76,36 +80,102 @@ export default {
    */
   props: {
     /**
+     * Props I added
+     */
+
+    /**
+     * Sets the v-img filed to the top or the bottom of the file input, default is image at the top
+     * @type {Boolean}
+     * @default true
+     */
+    imagePosition: {
+      type: Boolean,
+      default: true,
+    },
+    /**
      * Props passed through for v-file-input's built in props
+     * see Vuetify docs for more information https://dev.vuetifyjs.com/en/components/file-inputs
+     */
+
+    /**
+     * Appends an icon to the component, uses the same syntax as v-icon
+     * @type {String}
+     * @default undefined
      */
     appendIcon: {
       type: String,
       default: undefined,
     },
+
+    /**
+     * Appends an icon to the outside the component's input, uses same syntax as v-icon
+     * @type {String}
+     * @default undefined
+     */
     appendOuterIcon: {
       type: String,
       default: undefined,
     },
+
+    /**
+     * Enables autofocus
+     * @type {Boolean}
+     * @default false
+     */
     autoFocus: {
       type: Boolean,
       default: false,
     },
+
+    /**
+     *Changes the background-color of the input
+     @type {String}
+     @default undefined
+     */
     backgroundColor: {
       type: String,
       default: undefined,
     },
+
+    /**
+     * Changes display of selections to chips
+     * @type {Boolean}
+     * @default false
+     */
     chips: {
       type: Boolean,
       default: false,
     },
+
+    /**
+     * Applied when using **clearable** and the input is dirty
+     * @type {String}
+     * @default $clear
+     */
     clearIcon: {
       type: String,
       default: '$clear',
     },
+
+    /**
+     * Add input clear functionality, default icon is Material Icons **clear**
+     * @type {Boolean}
+     * @default true
+     */
     clearable: {
       type: Boolean,
       default: true,
     },
+    /**
+     * Applies specified color to the control - it can be the name of material color (for example success or purple) or css color (#033 or rgba(255, 0, 0, 0.5)). You can find list of built in classes on the colors page.
+     * @type {String}
+     * @default undefined
+     */
+    color: {
+      type: String,
+      default: undefined,
+    },
+
     dark: {
       type: Boolean,
       default: false,
@@ -117,6 +187,10 @@ export default {
     outlined: {
       type: Boolean,
       default: false,
+    },
+    prependIcon: {
+      type: String,
+      default: '',
     },
     light: {
       type: Boolean,
