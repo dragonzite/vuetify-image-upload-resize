@@ -16,9 +16,11 @@
                 :clearable="clearable"
                 :color="color"
                 :dark="dark"
+                :loading="isLoading"
                 :outlined="outlined"
                 :prepend-icon="prependIcon"
                 :preview="true"
+                :image-position="imagePosition"
                 :className="['fileinput', { 'fileinput--loaded': hasImage }]"
                 :capture="false"
                 :debug="1"
@@ -28,6 +30,8 @@
                 :label="hasImage ? 'Replace' : 'Upload'"
                 outputFormat="string"
                 @input="setImage"
+                @onUpload="startImageResize"
+                @onComplete="endImageResize"
               >
               </image-uploader>
             </v-card>
@@ -42,10 +46,11 @@
               <v-switch v-model="isChips" :label="'Chips'" />
               <v-switch v-model="isClearIcon" :label="'Clear Icon'" :disabled="!isClearable" />
               <v-switch v-model="isClearable" :label="'Clearable'" />
-              <v-switch v-model="$vuetify.theme.dark" :label="!$vuetify.theme.dark ? 'Dark Theme' : 'Light Theme'" />
+              <v-switch v-model="$vuetify.theme.dark" :label="!$vuetify.theme.dark ? 'Switch to Dark Theme' : 'Switch to Light Theme'" />
               <v-switch v-model="isOutlined" :label="'Outlined'"></v-switch>
               <v-switch v-model="isPrependIcon" :label="'Prepend Icon'" />
               <v-select :items="items" :label="'Color'" style="padding: 0 3px ;" @change="setColor($event)" />
+              <v-switch v-model="isImagePosition" :label="isImagePosition ? 'Switch to image on bottom' : 'Switch to image on top'" />
             </v-card>
           </v-col>
         </v-row>
@@ -78,6 +83,7 @@ export default {
       isDark: false,
       isOutlined: false,
       isPrependIcon: false,
+      isImagePosition: true,
       items: [null, 'primary', 'success', 'accent', 'orange', '#f0f00f', 'rgba(157,0,157)'],
     }
   },
@@ -136,14 +142,27 @@ export default {
       }
       return false
     },
+    imagePosition() {
+      if (this.isImagePosition) {
+        return true
+      }
+      return false
+    },
   },
   methods: {
+    startImageResize() {
+      this.isLoading = true
+    },
+    endImageResize() {
+      this.isLoading = false
+    },
     setImage: function(output) {
       this.isLoading = true
       this.hasImage = true
       this.image = output
       this.isLoading = false
     },
+
     setBackgroundColor(e) {
       this.backgroundColor = e
     },

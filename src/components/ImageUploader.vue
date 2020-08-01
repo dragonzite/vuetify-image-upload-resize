@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-img v-if="imagePreview" :src="imagePreview" class="img-preview" />
+    <v-img v-if="imagePreview && imagePosition" :src="imagePreview" class="img-preview" />
 
     <!-- TODO: finish getting v-file-input props passed through -->
 
@@ -25,10 +25,11 @@
       :class="className"
       type="file"
       :capture="capture"
+      @click:clear="removeImage"
       @change="uploadFile"
     />
     <slot name="upload-label"></slot>
-    <v-img v-if="imagePreview" :src="imagePreview" class="img-preview" />
+    <v-img v-if="imagePreview && !imagePosition" :src="imagePreview" class="img-preview" />
   </div>
 </template>
 
@@ -361,6 +362,13 @@ export default {
   },
 
   methods: {
+    /**
+     * remove image preview
+     */
+    removeImage() {
+      this.imagePreview = null
+      this.$emit(false)
+    },
     /**
      * Get file from input
      * @param  {object} event
